@@ -1,0 +1,35 @@
+.container {
+    margin: auto;
+    background-color: blanchedalmond;
+    font-size: 1.2rem;
+}
+
+.books {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+}
+
+.card {
+    border-radius: 10px;
+    background-color: #FFC0CB;
+    padding: 5px;
+    margin: 10px;
+}
+
+.hide-form {
+    display: none;
+}
+
+.remove-button, .toggle-button {
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    margin-top: 25px;
+    background-color: antiquewhite;
+    border-color: bisque;
+}
+
+.book-read {
+    background-color: #90EE90;
+}

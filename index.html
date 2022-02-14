@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Library</title>
+</head>
+<body>
+    <div class="container">
+        <form method="post" action="#" id="book-form" class="hide-form">
+            <label for="title">Title</label>
+            <input name="title" id="title" required /><br><br>
+            <label for="author">Author</label>
+            <input name="author" id="author" required /><br><br>
+            <label for="pages">Pages</label>
+            <input name="pages" type="number" id="pages"><br><br>
+            <label for="read">Have you read it?</label>
+            <label for="read-value-yes">Yes</label>
+            <input type="radio" name="read" value="true" />
+            <label for="read-value-no">No</label>
+            <input type="radio" name="read" value="false" checked />
+            <br><br><br>
+            <button type="submit">Add this book</button>
+            <button type="button" onclick="hideForm()">Cancel</button>
+        </form>
+        <h3>List of Books in the Library</h3>
+        <div id="books" class="books">
+        </div>
+        <button type="button" onclick="showForm()">Add a new book</button><br><br>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
