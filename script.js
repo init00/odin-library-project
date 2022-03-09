@@ -2,10 +2,40 @@
 let myLibray = [];
 const formElement = document.getElementById('book-form');
 
+const title = document.getElementById('title');
+const author = document.getElementById('author');
+const pages = document.getElementById('pages');
+
 addBookToLibrary('Atlas Shrugged', 'Ayn Rand', 1168, true);
 addBookToLibrary('Kafka on the Shore', 'Haruki Murakami', 505, false);
 addBookToLibrary('The Order of Time', 'Carlo Rovelli', 256, false);
 
+title.addEventListener('input', () => {
+    title.setCustomValidity('');
+    title.checkValidity();
+});
+
+title.addEventListener('invalid', () => {
+    title.setCustomValidity('Please enter a title for the book.');
+})
+
+author.addEventListener('input', () => {
+    author.setCustomValidity('');
+    author.checkValidity();
+})
+
+author.addEventListener('invalid', () => {
+    author.setCustomValidity('Please enter the book\'s author.');
+})
+
+pages.addEventListener('input', () => {
+    pages.setCustomValidity('');
+    pages.checkValidity();
+})
+
+pages.addEventListener('invalid', () => {
+    pages.setCustomValidity('Please enter the number of pages in the book.');
+})
 
 function addBookToLibrary(title, author, pages, isRead) {
     const book = new Book(title, author, pages, isRead);
